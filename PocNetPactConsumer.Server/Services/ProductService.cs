@@ -16,8 +16,6 @@ namespace PocNetPactConsumer.Server.Services
 
         public void HandleSaveProductEvent(ProductCreated @event)
         {
-            Console.WriteLine(@event.MessageAttributes["Name"]);
-
             if (string.IsNullOrEmpty(@event.MessageAttributes["Name"].StringValue) )
             {
                 throw new Exception("Product Name is required.");
