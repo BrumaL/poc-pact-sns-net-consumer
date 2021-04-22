@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\PactNet\PactNet.csproj" />
+    <ProjectReference Include="..\PactNet\PactNet.csproj" />
     <ProjectReference Include="..\PocNetPactConsumer.Server\PocNetPactConsumer.Server.csproj" />
   </ItemGroup>
 
