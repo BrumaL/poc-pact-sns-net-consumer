@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VFExb6GLm2ZE0nuVadDQiZrMIGHWzQpL+1pv5BYOeHkQrjh2IlZcfCLk5bcDl2h+1UbbCqB88xBDLwzBqgYxOQ==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MartinEklund\\.nuget\\packages\\awssdk.core\\3.7.0.13\\awssdk.core.3.7.0.13.nupkg.sha512",
+    "C:\\Users\\MartinEklund\\.nuget\\packages\\awssdk.sqs\\3.7.0.13\\awssdk.sqs.3.7.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}

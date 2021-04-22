@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "PocNetPactConsumer.Server/1.0.0": {
+        "dependencies": {
+          "AWSSDK.SQS": "3.7.0.13"
+        },
+        "runtime": {
+          "PocNetPactConsumer.Server.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.0.13": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.0.13"
+          }
+        }
+      },
+      "AWSSDK.SQS/3.7.0.13": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.0.13"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SQS.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.0.13"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PocNetPactConsumer.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/3.7.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8z7RHLvY/bQP3F55AL3keG3/6Y9O15RWFUhz1a585+UAFVvFD/eejn443s4C0O3k5TLnxf1u5M0qblIZbNMgqw==",
+      "path": "awssdk.core/3.7.0.13",
+      "hashPath": "awssdk.core.3.7.0.13.nupkg.sha512"
+    },
+    "AWSSDK.SQS/3.7.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C0LzTIfqwjiT7BlXOvAA2b1JI8LyF6ulfYyFB8jKivMMjvBJ+MvYkgS+xSp5uf7UnBX/0rpk5jgPIvpzBz6/gg==",
+      "path": "awssdk.sqs/3.7.0.13",
+      "hashPath": "awssdk.sqs.3.7.0.13.nupkg.sha512"
+    }
+  }
+}

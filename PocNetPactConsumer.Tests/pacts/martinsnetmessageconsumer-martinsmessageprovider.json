@@ -1,0 +1,43 @@
+{
+  "consumer": {
+    "name": "MartinsNetMessageConsumer"
+  },
+  "provider": {
+    "name": "MartinsMessageProvider"
+  },
+  "messages": [
+    {
+      "description": "create product event",
+      "providerStates": [
+        {
+          "name": "There is a product",
+          "params": null
+        }
+      ],
+      "contents": {
+        "Message": "Some message",
+        "MessageAttributes": {
+          "ID": {
+            "DataType": "number",
+            "StringValue": "3"
+          },
+          "Name": {
+            "DataType": "string",
+            "StringValue": "Polestar 3"
+          }
+        }
+      },
+      "matchingRules": {
+        "body": {
+        }
+      },
+      "metaData": {
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

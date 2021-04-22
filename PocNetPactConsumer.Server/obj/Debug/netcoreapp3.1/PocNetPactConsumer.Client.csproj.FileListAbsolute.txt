@@ -1,0 +1,13 @@
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.csprojAssemblyReference.cache
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.AssemblyInfoInputs.cache
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.AssemblyInfo.cs
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.csproj.CoreCompileInputs.cache
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\bin\Debug\netcoreapp3.1\PocNetPactConsumer.Client.exe
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\bin\Debug\netcoreapp3.1\PocNetPactConsumer.Client.deps.json
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\bin\Debug\netcoreapp3.1\PocNetPactConsumer.Client.runtimeconfig.json
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\bin\Debug\netcoreapp3.1\PocNetPactConsumer.Client.runtimeconfig.dev.json
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\bin\Debug\netcoreapp3.1\PocNetPactConsumer.Client.dll
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\bin\Debug\netcoreapp3.1\PocNetPactConsumer.Client.pdb
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.dll
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.pdb
+C:\Projects\PocNetPactConsumer\PocNetPactConsumerClient\obj\Debug\netcoreapp3.1\PocNetPactConsumer.Client.genruntimeconfig.cache
