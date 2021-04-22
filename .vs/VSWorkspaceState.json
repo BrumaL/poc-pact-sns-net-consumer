@@ -2,8 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\PocNetPactConsumer.Server",
-    "\\PocNetPactConsumer.Tests",
-    "\\PocNetPactConsumerClient"
+    "\\PocNetPactConsumer.Tests"
   ],
   "SelectedNode": "\\PocNetPactConsumer.Tests\\PocNetMessagePact.cs",
   "PreviewInSolutionExplorer": false

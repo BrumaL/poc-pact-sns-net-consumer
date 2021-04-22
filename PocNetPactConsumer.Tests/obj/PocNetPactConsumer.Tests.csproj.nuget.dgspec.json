@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj": {}
+    "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj": {}
   },
   "projects": {
     "C:\\Projects\\PactNet\\PactNet.csproj": {
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj": {
+    "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
+        "projectUniqueName": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
         "projectName": "PocNetPactConsumer.Server",
-        "projectPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
+        "projectPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
         "packagesPath": "C:\\Users\\MartinEklund\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\obj\\",
+        "outputPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MartinEklund\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -142,14 +142,14 @@
         }
       }
     },
-    "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj": {
+    "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj",
+        "projectUniqueName": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj",
         "projectName": "PocNetPactConsumer.Tests",
-        "projectPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj",
+        "projectPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Tests\\PocNetPactConsumer.Tests.csproj",
         "packagesPath": "C:\\Users\\MartinEklund\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Tests\\obj\\",
+        "outputPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MartinEklund\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -169,8 +169,8 @@
               "C:\\Projects\\PactNet\\PactNet.csproj": {
                 "projectPath": "C:\\Projects\\PactNet\\PactNet.csproj"
               },
-              "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj": {
-                "projectPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj"
+              "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj": {
+                "projectPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj"
               }
             }
           }

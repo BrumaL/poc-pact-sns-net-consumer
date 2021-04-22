@@ -90,11 +90,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
+      "projectUniqueName": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
       "projectName": "PocNetPactConsumer.Server",
-      "projectPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
+      "projectPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\PocNetPactConsumer.Server.csproj",
       "packagesPath": "C:\\Users\\MartinEklund\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\PocNetPactConsumer\\PocNetPactConsumer.Server\\obj\\",
+      "outputPath": "C:\\Projects\\poc-pact-sns-net-consumer\\PocNetPactConsumer.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MartinEklund\\AppData\\Roaming\\NuGet\\NuGet.Config",
