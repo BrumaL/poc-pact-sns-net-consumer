@@ -15,6 +15,7 @@ namespace PocNetPactConsumer.Tests
 
         public PocNetMessagePact(IMessageSink sink) 
         {
+            // add a comment for a new build
             _messagePactBuilder = new MessagePactBuilder(new PactConfig
             {
                 SpecificationVersion = "3.0.0",
