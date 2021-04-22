@@ -16,12 +16,14 @@ namespace PocNetPactConsumer.Server.Services
 
         public void HandleSaveProductEvent(ProductCreated @event)
         {
+            Console.WriteLine(@event.MessageAttributes["Name"]);
+
             if (string.IsNullOrEmpty(@event.MessageAttributes["Name"].StringValue) )
             {
                 throw new Exception("Product Name is required.");
             }
 
-            if (!Int32.TryParse(@event.MessageAttributes["ID"].StringValue, out int id))
+            if (!int.TryParse(@event.MessageAttributes["ID"].StringValue, out int id))
             {
                 throw new Exception("Product Id is required.");
             }
