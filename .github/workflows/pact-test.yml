@@ -17,24 +17,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
         with:
-          node-version: 14
+          dotnet-version: '3.1.x'
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Run tests
-        run: dotnet test
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
       - name: Publish contract
         run: >
-          yarn pact-broker publish pacts 
+          dotnet pact-broker publish pacts 
           --broker-base-url $PACT_BROKER_BASE_URL 
           --broker-token $PACT_BROKER_TOKEN 
           --consumer-app-version $PACTICIPANT_VERSION 
           --tag $GITHUB_HEAD_REF
       - name: Can i deploy?
         run: >
-          yarn pact-broker can-i-deploy
+          dotnet pact-broker can-i-deploy
           --pacticipant $PACTICIPANT
           --version $PACTICIPANT_VERSION
           --to $DEPLOY_TARGET
