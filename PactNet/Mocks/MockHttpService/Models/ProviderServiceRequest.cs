@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 using PactNet.Configuration.Json.Converters;
 using PactNet.Mocks.Models;
 
@@ -13,8 +11,7 @@ namespace PactNet.Mocks.MockHttpService.Models
         private dynamic _body;
 
         [JsonProperty(PropertyName = "method", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(StringEnumConverter),
-            converterParameters: typeof(CamelCaseNamingStrategy))]
+        [JsonConverter(typeof(CamelCaseStringEnumConverter))]
         public HttpVerb Method { get; set; }
 
         [JsonProperty(PropertyName = "path", NullValueHandling = NullValueHandling.Ignore)]
