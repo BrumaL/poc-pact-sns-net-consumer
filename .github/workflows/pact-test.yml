@@ -27,16 +27,20 @@ jobs:
         run: dotnet build
       - name: Test
         run: dotnet test ./PocNetPactConsumer.Tests/PocNetPactConsumer.Tests.csproj
+      - name: Setup pact-cli
+        run: docker pull pactfoundation/pact-cli:latest
       - name: Publish contract
         run: >
-          dotnet pact-broker publish pacts 
+          docker run pactfoundation/pact-cli:latest
+          pact-broker publish pacts 
           --broker-base-url $PACT_BROKER_BASE_URL 
           --broker-token $PACT_BROKER_TOKEN 
           --consumer-app-version $PACTICIPANT_VERSION 
           --tag $GITHUB_HEAD_REF
       - name: Can i deploy?
         run: >
-          dotnet pact-broker can-i-deploy
+          docker run pactfoundation/pact-cli:latest
+          pact-broker can-i-deploy
           --pacticipant $PACTICIPANT
           --version $PACTICIPANT_VERSION
           --to $DEPLOY_TARGET
