@@ -2,14 +2,39 @@ using Newtonsoft.Json;
 using PocNetPactConsumer.Server.Models;
 using PocNetPactConsumer.Server.Repository;
 using Xunit;
+using ComPact.Builders.V3;
+using ComPact.Models;
+using NSubstitute;
+using PocNetPactConsumer.Server.Services;
+using System.Threading.Tasks;
 
 namespace PocNetPactConsumer.Tests
 {
     public class ConsumerPactTests
     {
+        private MessageBuilder _messageBuilder;
 
         public ConsumerPactTests()
         {
+            _messageBuilder = Pact.Message
+                .Given(new ProviderState
+                {
+                    Name = "A new product has been created"
+                })
+                .ShouldSend("create product event")
+                .With(Pact.JsonContent.With(
+                    Some.String.Named("Message").Like("this is a message"),
+                    Some.Object.Named("MessageAttributes").With(
+                        Some.Object.Named("ID").With(
+                            Some.Element.Named("DataType").Like("number"),
+                            Some.Element.Named("StringValue").Like("3")
+                            ),
+                        Some.Object.Named("Name").With(
+                            Some.Element.Named("DataType").Like("string"),
+                            Some.Element.Named("StringValue").Like("Polestar 3")
+                            )
+                        )
+                    ));
         }
 
         [Fact]
@@ -21,6 +46,21 @@ namespace PocNetPactConsumer.Tests
             var actualProduct = repo.GetProduct(1);
 
             Assert.Equal(JsonConvert.SerializeObject(expectedProduct), JsonConvert.SerializeObject(actualProduct));
+        }
+
+        [Fact]
+        public async Task Handle_WhenProductIsCreated_SavesProduct()
+        {
+            var stubRepo = Substitute.For<IProductRepository>();
+            var consumer = new ProductService(stubRepo);
+            var productCreated = new Product { Id = 3, Name = "Polestar 3" };
+
+            var builder = new MessagePactBuilder("MartinsNetMessageConsumer", "MartinsMessageProvider");
+
+            await builder.SetUp(_messageBuilder
+                .VerifyConsumer<ProductCreated>(e => consumer.HandleSaveProductEvent(e)))
+                .BuildAsync();
+           stubRepo.Received(1).SaveProduct(productCreated);
         }
 
         // PactNet message-pact feature branch function

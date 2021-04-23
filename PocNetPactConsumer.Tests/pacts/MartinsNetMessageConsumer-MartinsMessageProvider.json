@@ -1,0 +1,79 @@
+{
+  "consumer": {
+    "name": "MartinsNetMessageConsumer"
+  },
+  "provider": {
+    "name": "MartinsMessageProvider"
+  },
+  "messages": [
+    {
+      "providerStates": [
+        {
+          "name": "A new product has been created"
+        }
+      ],
+      "description": "create product event",
+      "contents": {
+        "Message": "this is a message",
+        "MessageAttributes": {
+          "ID": {
+            "DataType": "number",
+            "StringValue": "3"
+          },
+          "Name": {
+            "DataType": "string",
+            "StringValue": "Polestar 3"
+          }
+        }
+      },
+      "matchingRules": {
+        "header": {},
+        "body": {
+          "$.Message": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.ID.DataType": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.ID.StringValue": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.Name.DataType": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.Name.StringValue": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metaData": {
+        "ContentType": "application/json"
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}
