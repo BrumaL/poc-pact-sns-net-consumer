@@ -14,14 +14,14 @@ namespace PocNetPactConsumer.Server.Services
             _productRepository = productRepository;
         }
 
-        public void HandleSaveProductEvent(ProductCreated @event)
+        public void HandleSaveProductEvent(ProductCreated productCreated)
         {
-            if (string.IsNullOrEmpty(@event.MessageAttributes["Name"].StringValue) )
+            if (string.IsNullOrEmpty(productCreated.MessageAttributes["Name"].StringValue) )
             {
                 throw new Exception("Product Name is required.");
             }
 
-            if (!int.TryParse(@event.MessageAttributes["ID"].StringValue, out int id))
+            if (!int.TryParse(productCreated.MessageAttributes["ID"].StringValue, out int id))
             {
                 throw new Exception("Product Id is required.");
             }
@@ -29,7 +29,7 @@ namespace PocNetPactConsumer.Server.Services
             _productRepository.SaveProduct(new Product
             {
                 Id = id,
-                Name = @event.MessageAttributes["Name"].StringValue
+                Name = productCreated.MessageAttributes["Name"].StringValue
             });
         }
 

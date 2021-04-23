@@ -13,17 +13,13 @@ namespace PocNetPactConsumer.Tests
         private readonly IMessagePactBuilder _messagePactBuilder;
         public IMessagePact MessagePact;
 
-        public PocNetMessagePact(IMessageSink sink) 
+        public PocNetMessagePact() 
         {
             _messagePactBuilder = new MessagePactBuilder(new PactConfig
             {
                 SpecificationVersion = "3.0.0",
                 LogDir = $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}logs{Path.DirectorySeparatorChar}",
                 PactDir = $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}pacts{Path.DirectorySeparatorChar}",
-                Outputters = new List<IOutput>
-                {
-                    new XUnitOutput(sink)
-                }
             })
             .ServiceConsumer("MartinsNetMessageConsumer")
             .HasPactWith("MartinsMessageProvider");
