@@ -26,7 +26,7 @@ namespace PocNetPactConsumer.Tests
                     Some.Object.Named("MessageAttributes").With(
                         Some.Object.Named("ID").With(
                             Some.Element.Named("DataType").Like("number"),
-                            Some.Element.Named("StringValue").Like("3")
+                            Some.Element.Named("StringValue").Like(234)
                             ),
                         Some.Object.Named("Name").With(
                             Some.Element.Named("DataType").Like("string"),
