@@ -8,9 +8,7 @@
   "messages": [
     {
       "providerStates": [
-        {
-          "name": "A new product has been created"
-        }
+        {}
       ],
       "description": "create product event",
       "contents": {

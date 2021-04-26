@@ -32,7 +32,7 @@ jobs:
       - name: Publish contract
         run: >
           docker run pactfoundation/pact-cli:latest
-          broker publish pacts 
+          broker publish PocNetPactConsumer.Tests/pacts 
           --broker-base-url $PACT_BROKER_BASE_URL 
           --broker-token $PACT_BROKER_TOKEN 
           --consumer-app-version $PACTICIPANT_VERSION 

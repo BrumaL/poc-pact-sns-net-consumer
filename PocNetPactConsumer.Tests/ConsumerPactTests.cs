@@ -19,7 +19,6 @@ namespace PocNetPactConsumer.Tests
             _messageBuilder = Pact.Message
                 .Given(new ProviderState
                 {
-                    Name = "A new product has been created"
                 })
                 .ShouldSend("create product event")
                 .With(Pact.JsonContent.With(
