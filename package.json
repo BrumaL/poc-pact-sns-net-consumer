@@ -1,0 +1,11 @@
+{
+  "name": "poc-pact-sns-net-consumer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BrumaL/poc-pact-sns-net-consumer.git",
+  "author": "Martin Eklund <martin.eklund@xlent.se>",
+  "license": "MIT",
+  "dependencies": {
+    "@pact-foundation/pact": "^9.15.5"
+  }
+}
