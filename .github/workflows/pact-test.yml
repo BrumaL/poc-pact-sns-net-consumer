@@ -21,10 +21,10 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x'
-      - name: Install dependencies
-        run: >
-         dotnet restore
-         yarn install --frozen-lockfile
+      - name: Install dotnet core dependencies
+        run: dotnet restore
+      - name: Install node dependencies
+        run: yarn install --frozen-lockfile
       - name: Build
         run: dotnet build
       - name: Test
