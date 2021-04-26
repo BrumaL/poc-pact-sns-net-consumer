@@ -47,6 +47,7 @@ namespace PocNetPactConsumer.Tests
             Assert.Equal(JsonConvert.SerializeObject(expectedProduct), JsonConvert.SerializeObject(actualProduct));
         }
 
+
         [Fact]
         public async Task Handle_WhenProductIsCreated_SavesProduct()
         {
