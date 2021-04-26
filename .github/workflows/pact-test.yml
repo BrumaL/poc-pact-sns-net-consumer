@@ -22,7 +22,9 @@ jobs:
         with:
           dotnet-version: '3.1.x'
       - name: Install dependencies
-        run: dotnet restore
+        run: >
+         dotnet restore
+         yarn install --frozen-lockfile
       - name: Build
         run: dotnet build
       - name: Test
@@ -31,16 +33,14 @@ jobs:
         run: docker pull pactfoundation/pact-cli:latest
       - name: Publish contract
         run: >
-          docker run --rm -v ${PWD}:${PWD} pactfoundation/pact-cli:latest
-          broker publish PocNetPactConsumer.Tests/pacts 
+          yarn pact-broker publish PocNetPactConsumer.Tests/pacts 
           --broker-base-url $PACT_BROKER_BASE_URL 
           --broker-token $PACT_BROKER_TOKEN 
           --consumer-app-version $PACTICIPANT_VERSION 
           --tag $GITHUB_HEAD_REF
       - name: Can i deploy?
         run: >
-          docker run pactfoundation/pact-cli:latest
-          broker can-i-deploy
+          yarn pact-broker can-i-deploy
           --pacticipant $PACTICIPANT
           --version $PACTICIPANT_VERSION
           --to $DEPLOY_TARGET
