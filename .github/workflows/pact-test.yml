@@ -31,8 +31,8 @@ jobs:
         run: docker pull pactfoundation/pact-cli:latest
       - name: Publish contract
         run: >
-          docker run pactfoundation/pact-cli:latest
-          broker publish ./PocNetPactConsumer.Tests/pacts 
+          docker run --rm -v ${PWD}:${PWD} pactfoundation/pact-cli:latest
+          broker publish PocNetPactConsumer.Tests/pacts 
           --broker-base-url $PACT_BROKER_BASE_URL 
           --broker-token $PACT_BROKER_TOKEN 
           --consumer-app-version $PACTICIPANT_VERSION 
