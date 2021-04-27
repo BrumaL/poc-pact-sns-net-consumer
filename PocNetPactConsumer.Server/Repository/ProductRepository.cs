@@ -8,8 +8,8 @@ namespace PocNetPactConsumer.Server.Repository
     {
         private List<Product> productList = new List<Product>
         { 
-            new Product { Id = 1, Name = "Polestar 1" },
-            new Product { Id = 2, Name = "Polestar 2" }
+            new Product { Id = 1, Name = "Polestar 1", Color = "Blue" },
+            new Product { Id = 2, Name = "Polestar 2", Color = "Red" }
         };
 
         public Product GetProduct(int id)

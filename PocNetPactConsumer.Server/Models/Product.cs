@@ -8,10 +8,11 @@ namespace PocNetPactConsumer.Server.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Color { get; set; }
 
         protected bool Equals(Product other)
         {
-            return Id == other.Id && string.Equals(Name, other.Name);
+            return Id == other.Id && string.Equals(Name, other.Name) && string.Equals(Color, other.Color);
         }
 
         public override bool Equals(object obj)
@@ -24,7 +25,7 @@ namespace PocNetPactConsumer.Server.Models
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Name);
+            return HashCode.Combine(Id, Name, Color);
         }
     }
 }

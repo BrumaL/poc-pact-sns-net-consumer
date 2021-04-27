@@ -21,6 +21,10 @@
           "Name": {
             "DataType": "string",
             "StringValue": "Polestar 3"
+          },
+          "Color": {
+            "DataType": "string",
+            "StringValue": "Red"
           }
         }
       },
@@ -56,6 +60,20 @@
             ]
           },
           "$.MessageAttributes.Name.StringValue": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.Color.DataType": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.Color.StringValue": {
             "matchers": [
               {
                 "match": "type"
