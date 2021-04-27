@@ -31,6 +31,10 @@ namespace PocNetPactConsumer.Tests
                         Some.Object.Named("Name").With(
                             Some.String.Named("DataType").Like("string"),
                             Some.String.Named("StringValue").Like("Polestar 3")
+                            ),
+                        Some.Object.Named("Color").With(
+                            Some.String.Named("DataType").Like("string"),
+                            Some.String.Named("StringValue").Like("Red")
                             )
                         )
                     ));
@@ -40,7 +44,7 @@ namespace PocNetPactConsumer.Tests
         [Fact]
         public void GetProductWithId1()
         {
-            var expectedProduct = new Product() { Id = 1, Name = "Polestar 1" };
+            var expectedProduct = new Product() { Id = 1, Name = "Polestar 1", Color = "Blue" };
 
             var repo = new ProductRepository();
             var actualProduct = repo.GetProduct(1);
@@ -54,7 +58,7 @@ namespace PocNetPactConsumer.Tests
         {
             var stubRepo = Substitute.For<IProductRepository>();
             var consumer = new ProductService(stubRepo);
-            var productCreated = new Product { Id = 3, Name = "Polestar 3" };
+            var productCreated = new Product { Id = 3, Name = "Polestar 3", Color = "Red" };
 
             var builder = new MessagePactBuilder("MartinsNetMessageConsumer", "MartinsMessageProvider");
 

@@ -29,7 +29,8 @@ namespace PocNetPactConsumer.Server.Services
             _productRepository.SaveProduct(new Product
             {
                 Id = id,
-                Name = productCreated.MessageAttributes["Name"].StringValue
+                Name = productCreated.MessageAttributes["Name"].StringValue,
+                Color = productCreated.MessageAttributes["Color"].StringValue
             });
         }
 
