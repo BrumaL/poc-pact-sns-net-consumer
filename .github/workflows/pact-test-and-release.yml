@@ -70,7 +70,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./.github/actions/release
+      - uses: ./.github/actions/create-release
         with:
           stage: dev
           version: ${{ github.event.pull_request.head.sha }}
@@ -92,7 +92,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./.github/actions/release
+      - uses: ./.github/actions/create-release
         with:
           stage: dev
           version: ${{ github.sha }}
@@ -113,7 +113,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./.github/actions/release
+      - uses: ./.github/actions/create-release
         with:
           stage: staging
           version: ${{ github.sha }}
@@ -134,7 +134,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./.github/actions/release
+      - uses: ./.github/actions/create-release
         with:
           stage: production
           version: ${{ github.sha }}
