@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: dotnet build
       - name: Test
-        run: dotnet test ./PocNetPactConsumer.Tests/PocNetPactConsumer.Tests.csproj
+        run: dotnet test ./PocNetPactConsumer.Tests.csproj
       - name: Publish contract
         run: >
           yarn pact-broker publish PocNetPactConsumer.Tests/pacts 
@@ -52,7 +52,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./PocNetPactConsumer.Test/.github/actions/can-i-deploy
+      - uses: ./.github/actions/can-i-deploy
         with:
           stage: dev
           version: ${{ github.sha }}
@@ -70,7 +70,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./PocNetPactConsumer.Test/.github/actions/release
+      - uses: ./.github/actions/release
         with:
           stage: dev
           version: ${{ github.event.pull_request.head.sha }}
@@ -92,7 +92,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./PocNetPactConsumer.Test/.github/actions/release
+      - uses: ./.github/actions/release
         with:
           stage: dev
           version: ${{ github.sha }}
@@ -113,7 +113,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./PocNetPactConsumer.Test/.github/actions/release
+      - uses: ./.github/actions/release
         with:
           stage: staging
           version: ${{ github.sha }}
@@ -134,7 +134,7 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - uses: ./PocNetPactConsumer.Test/.github/actions/release
+      - uses: ./.github/actions/release
         with:
           stage: production
           version: ${{ github.sha }}
