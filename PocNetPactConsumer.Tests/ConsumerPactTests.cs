@@ -36,6 +36,7 @@ namespace PocNetPactConsumer.Tests
                     ));
         }
 
+
         [Fact]
         public void GetProductWithId1()
         {
