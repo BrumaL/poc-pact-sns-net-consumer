@@ -35,6 +35,10 @@ namespace PocNetPactConsumer.Tests
                         Some.Object.Named("Color").With(
                             Some.String.Named("DataType").Like("string"),
                             Some.String.Named("StringValue").Like("Red")
+                            ),
+                        Some.Object.Named("Price").With(
+                            Some.String.Named("DataType").Like("float"),
+                            Some.String.Named("StringValue").Like("10,00")
                             )
                         )
                     ));
@@ -58,7 +62,7 @@ namespace PocNetPactConsumer.Tests
         {
             var stubRepo = Substitute.For<IProductRepository>();
             var consumer = new ProductService(stubRepo);
-            var productCreated = new Product { Id = 3, Name = "Polestar 3", Color = "Red" };
+            var productCreated = new Product { Id = 3, Name = "Polestar 3", Color = "Red", Price = 10.00M };
 
             var builder = new MessagePactBuilder("MartinsNetMessageConsumer", "MartinsMessageProvider");
 

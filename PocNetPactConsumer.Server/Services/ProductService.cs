@@ -26,12 +26,19 @@ namespace PocNetPactConsumer.Server.Services
                 throw new Exception("Product Id is required.");
             }
 
+            if (!decimal.TryParse(productCreated.MessageAttributes["Price"].StringValue, out decimal price))
+            {
+                throw new Exception("Price is required and can not be 0.");
+            }
+
+           
 
             _productRepository.SaveProduct(new Product
             {
                 Id = id,
                 Name = productCreated.MessageAttributes["Name"].StringValue,
-                Color = productCreated.MessageAttributes["Color"].StringValue
+                Color = productCreated.MessageAttributes["Color"].StringValue,
+                Price = price
             });
         }
 

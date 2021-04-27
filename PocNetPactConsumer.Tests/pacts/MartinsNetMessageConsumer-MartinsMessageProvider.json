@@ -25,6 +25,10 @@
           "Color": {
             "DataType": "string",
             "StringValue": "Red"
+          },
+          "Price": {
+            "DataType": "float",
+            "StringValue": "10,00"
           }
         }
       },
@@ -74,6 +78,20 @@
             ]
           },
           "$.MessageAttributes.Color.StringValue": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.Price.DataType": {
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$.MessageAttributes.Price.StringValue": {
             "matchers": [
               {
                 "match": "type"
