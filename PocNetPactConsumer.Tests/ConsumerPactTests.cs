@@ -63,4 +63,28 @@ namespace PocNetPactConsumer.Tests
            stubRepo.Received(1).SaveProduct(productCreated);
         }
     }
+
+//    tag-contract:
+//    if: ${{ github.event.pull_request.state == 'closed'}
+//}
+//runs - on: ubuntu - latest
+//    steps:
+//-name: Checkout
+// uses: actions / checkout@v2
+// - name: Setup Node.js
+
+//   uses: actions/setup-node @v1
+
+//   with:
+
+//     node-version: 14
+//      - name: Install dependencies
+
+//   run: yarn install --frozen-lockfile
+//      - uses: ./.github/actions/create-release
+//   with:
+
+//     stage: dev
+//     version: ${ { github.event.pull_request.head.sha } }
+//pacticipant: $PACTICIPANT
 }
