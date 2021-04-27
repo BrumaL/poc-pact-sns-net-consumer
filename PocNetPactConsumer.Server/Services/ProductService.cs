@@ -26,6 +26,7 @@ namespace PocNetPactConsumer.Server.Services
                 throw new Exception("Product Id is required.");
             }
 
+
             _productRepository.SaveProduct(new Product
             {
                 Id = id,
