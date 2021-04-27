@@ -25,12 +25,12 @@ namespace PocNetPactConsumer.Tests
                     Some.String.Named("Message").Like("this is a message"),
                     Some.Object.Named("MessageAttributes").With(
                         Some.Object.Named("ID").With(
-                            Some.Element.Named("DataType").Like("number"),
-                            Some.Element.Named("StringValue").Like("3")
+                            Some.String.Named("DataType").Like("number"),
+                            Some.String.Named("StringValue").Like("3")
                             ),
                         Some.Object.Named("Name").With(
-                            Some.Element.Named("DataType").Like("string"),
-                            Some.Element.Named("StringValue").Like("Polestar 3")
+                            Some.String.Named("DataType").Like("string"),
+                            Some.String.Named("StringValue").Like("Polestar 3")
                             )
                         )
                     ));
