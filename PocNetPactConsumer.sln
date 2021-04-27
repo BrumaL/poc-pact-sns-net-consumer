@@ -9,7 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PocNetPactConsumer.Tests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1D9FEF1-9774-4470-B302-C0174F2881AF}"
 	ProjectSection(SolutionItems) = preProject
+		.github\actions\release\action.yml = .github\actions\release\action.yml
+		.github\actions\can-i-deploy\action.yml = .github\actions\can-i-deploy\action.yml
 		package.json = package.json
+		.github\workflows\pact-test-and-release.yml = .github\workflows\pact-test-and-release.yml
 	EndProjectSection
 EndProject
 Global
