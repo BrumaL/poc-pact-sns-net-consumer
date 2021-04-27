@@ -37,7 +37,7 @@ namespace PocNetPactConsumer.Tests
                             Some.String.Named("StringValue").Like("Red")
                             ),
                         Some.Object.Named("Price").With(
-                            Some.String.Named("DataType").Like("float"),
+                            Some.String.Named("DataType").Like("number"),
                             Some.String.Named("StringValue").Like("10,00")
                             )
                         )
