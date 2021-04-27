@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: dotnet build
       - name: Test
-        run: dotnet test ./PocNetPactConsumer.Tests.csproj
+        run: dotnet test ./PocNetPactConsumer.Tests/PocNetPactConsumer.Tests.csproj
       - name: Publish contract
         run: >
           yarn pact-broker publish PocNetPactConsumer.Tests/pacts 
