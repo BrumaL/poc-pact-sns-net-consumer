@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include=".github\actions\can-i-deploy\action.yml" />
+    <None Include=".github\actions\release\action.yml" />
+    <None Include=".github\workflows\pact-test-and-release.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ComPact" Version="0.4.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
